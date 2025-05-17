@@ -54,7 +54,7 @@ public class Main {
         }
         long endTime = System.currentTimeMillis();
 
-        System.out.printf("Tiempo: "+(endTime - startTime) + " millis");
+        System.out.print("Tiempo: "+(endTime - startTime) + " millis");
 
 
 
