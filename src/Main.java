@@ -7,7 +7,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int largoVector = 10;
-        int cantidad_vectores=10;
+        int cantidad_vectores=10000;
+
+        int k=0;
+        Scanner entrada = new Scanner(System.in);
+        System.out.printf("Ingrese la cantidad de vectores cercanos: ");
+        k=entrada.nextInt();
+        long startTime = System.currentTimeMillis();
         int[][] vectores = new int[cantidad_vectores][largoVector];
         Random random = new Random();
         for (int i = 0; i < cantidad_vectores; i++) {
@@ -36,7 +42,7 @@ public class Main {
 
 
 
-        int k=3;
+
 
         double[] temp = Arrays.copyOf(distancias,cantidad_vectores);
         Arrays.sort(temp);
@@ -46,8 +52,9 @@ public class Main {
         for (int i = 0; i < k; i++) {
             System.out.println(vectores_cercanos[i]);
         }
-        System.out.println("----------------------");
+        long endTime = System.currentTimeMillis();
 
+        System.out.printf("Tiempo: "+(endTime - startTime) + " millis");
 
 
 
